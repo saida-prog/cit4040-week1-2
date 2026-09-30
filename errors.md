@@ -61,17 +61,17 @@ Full stack trace:
 
 ```
 Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "<local9>" is null
-	at Calculator.main(Calculator.java:87)
+	at Calculator.main(Calculator.java:75)
 ```
 
 (`<local9>` appears instead of the name `missing` because javac does not store local
 variable names by default; compiling with `javac -g Calculator.java` shows `"missing"`.)
 
 **Which file and line caused the exception?**
-`Calculator.java`, line 87 — the line `System.out.println(missing.length());`.
+`Calculator.java`, line 75 — the line `System.out.println(missing.length());`.
 
 **Which line of the trace is the first one that mentions code I wrote?**
-`at Calculator.main(Calculator.java:87)` — here it is the first (and only) `at` line,
+`at Calculator.main(Calculator.java:75)` — here it is the first (and only) `at` line,
 because the exception happened directly in my `main` method, not inside a library.
 
 **What single change would prevent it?**
